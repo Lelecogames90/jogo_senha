@@ -5,25 +5,24 @@
 # Cada fileira deve ter uma variável que vai ser alterada cada rodada
 # O número dito pelo jogador caso acerte ou erre o número da fileira, o programa dirá
 # Caso tenha dúvida, não conte comigo
-
+import random 
 v = 0
-
-a = "1"
-b = "3"
-c = "9"
-d = "5"
+a = random.randint(0,9)
+b = random.randint(0,9)
+c = random.randint(0,9)
+d = random.randint(0,9)
 
 j = [a, b, c, d]
 lj = []
 
 while j != lj :
-    W = input("Primeiro número: ")
+    W = int(input("Primeiro número: "))
     lj = [W]
-    X = input("Segundo número: ")
+    X = int(input("Segundo número: "))
     lj = [W, X]
-    Y = input("Terceiro número: ")
+    Y = int(input("Terceiro número: "))
     lj = [W, X, Y]
-    Z = input("Quarto número: ")
+    Z = int(input("Quarto número: "))
     lj = [W, X, Y, Z]
 
     print(lj)
@@ -47,5 +46,8 @@ while j != lj :
     elif v <= 0 :
         print(f"Não há nenhuma resposta certa")
     else :
-        print(f"Há {v} respostas certas")
+        if v == 4 :
+            print("Parabéns, Você ganhou!")
+        else :
+            print(f"Há {v} respostas certas")
     v = 0
