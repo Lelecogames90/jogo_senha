@@ -6,15 +6,14 @@
 # O número dito pelo jogador caso acerte ou erre o número da fileira, o programa dirá
 # Caso tenha dúvida, não conte comigo
 import random 
+h = []
 v = 0
 a = random.randint(0,9)
 b = random.randint(0,9)
 c = random.randint(0,9)
 d = random.randint(0,9)
-
 j = [a, b, c, d]
 lj = []
-
 while j != lj :
     W = int(input("Primeiro número: "))
     lj = [W]
@@ -24,10 +23,6 @@ while j != lj :
     lj = [W, X, Y]
     Z = int(input("Quarto número: "))
     lj = [W, X, Y, Z]
-
-    print(lj)
-    print("==========================")
-    print(j)
     print("")
     for i in j :
         if i == W :
@@ -51,3 +46,5 @@ while j != lj :
         else :
             print(f"Há {v} respostas certas")
     v = 0
+    h.append(lj)
+    print(f"Histórico = {h}")
