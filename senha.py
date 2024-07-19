@@ -6,63 +6,46 @@
 # O número dito pelo jogador caso acerte ou erre o número da fileira, o programa dirá
 # Caso tenha dúvida, não conte comigo
 
-'''
-f1 = Fileira 1
-f2 = Fileria 2
-f3 = Fileria 3
-f4 = Fileira 4
-j = Jogo
-lj = Listad do Jogador
-'''
-print("============ Jogo da Senha ============")
-x = input("Você tem alguma dúvida? ")
-print("Não ligo, se vira aí!")
-print("")
-print("")
-print("")
-f1 = str("3")
-f2 = str("4")
-f3 = str("2")
-f4 = str("9")
-j = str([f1, f2, f3, f4])
+v = 0
+
+a = "1"
+b = "3"
+c = "9"
+d = "5"
+
+j = [a, b, c, d]
 lj = []
-F1 = input("Primeiro dígito: ")
-lj = [F1]
-print(lj)
-print("=====================")
-print(j)
-print("")
-F2 = input("Segundo digito: ")
-lj = [F1, F2]
-print(lj)
-print("=====================")
-print(j)
-print("")
-F3 = input("Terceiro digito: ")
-lj = [F1, F2, F3]
-print(lj)
-print("=====================")
-print(j)
-print("")
-F4 = input("Quarto digito: ")
-lj = [F1, F2, F3, F4]
-print(lj)
-print("=====================")
-print(j)
-print("")
-if lj == j :
-    print("Meus parabéns, de primeira!")
-else :
-    while lj != j :
-        print("")
-        print("")
-        F1 = input("Digite novamente o primeiro digito: ")
-        lj.insert(0, F1)
-        F2 = input("Digite novamente o segundo digito: ")
-        lj.insert(1, F2)
-        F3 = input("Digite novamente o terceiro digito: ")
-        lj.insert(2, F3)
-        F4 = input("Digite novamente o quarto digito: ")
-        lj.insert(3, F4)
-print("Fim de jogo, você acertou! ")
-print("=======================================")
+
+while j != lj :
+    W = input("Primeiro número: ")
+    lj = [W]
+    X = input("Segundo número: ")
+    lj = [W, X]
+    Y = input("Terceiro número: ")
+    lj = [W, X, Y]
+    Z = input("Quarto número: ")
+    lj = [W, X, Y, Z]
+
+    print(lj)
+    print("==========================")
+    print(j)
+    print("")
+    v = 0
+    for i in j :
+        if i == W :
+            v = v + 1  
+        else :
+            if i == X :
+                v = v + 1
+            else :
+                if i == Y :
+                    v = v + 1
+                else :
+                    if i == Z :
+                        v = v + 1
+    if v == 1 :
+        print(f"Há {v} resposta certa")
+    elif v <= 0 :
+        print(f"Não há nenhuma resposta certa")
+    else :
+        print(f"Há {v} respostas certas")
