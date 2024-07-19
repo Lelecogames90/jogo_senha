@@ -30,7 +30,6 @@ while j != lj :
     print("==========================")
     print(j)
     print("")
-    v = 0
     for i in j :
         if i == W :
             v = v + 1  
@@ -49,3 +48,4 @@ while j != lj :
         print(f"Não há nenhuma resposta certa")
     else :
         print(f"Há {v} respostas certas")
+    v = 0
