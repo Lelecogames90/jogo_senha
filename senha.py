@@ -5,7 +5,7 @@
 # Cada fileira deve ter uma variável que vai ser alterada cada rodada
 # O número dito pelo jogador caso acerte ou erre o número da fileira, o programa dirá
 # Caso tenha dúvida, não conte comigo
-import random 
+import random
 h = []
 v = 0
 a = random.randint(0,9)
