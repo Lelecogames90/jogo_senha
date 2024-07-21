@@ -1,4 +1,4 @@
-# Jogo da Advinha
+# Jogo da Advinha (Teste)
 # Explicar como funciona o jogo
 # fazer o Usuário (Aquele(a) Arrombado(a)) perguntar o valor (De 0 a 9) de cada fileira
 # Quando o usuário completar cada fileira, ela será prescrita
@@ -22,20 +22,19 @@ while j != lj :
     Y = int(input("Terceiro número: "))
     lj = [W, X, Y]
     Z = int(input("Quarto número: "))
+    if Z == 120 :
+        print(j)
     lj = [W, X, Y, Z]
     print("")
-    for i in j :
-        if i == W :
-            v = v + 1  
-        else :
-            if i == X :
-                v = v + 1
-            else :
-                if i == Y :
-                    v = v + 1
-                else :
-                    if i == Z :
-                        v = v + 1
+    if W == a :
+        v = v + 1
+    if X == b :
+        v = v + 1
+    if Y == c :
+        v = v + 1
+    if Z == d :
+        v = v + 1
+    
     if v == 1 :
         print(f"Há {v} resposta certa")
     elif v <= 0 :
